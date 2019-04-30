@@ -1,0 +1,10 @@
+A = [ 5 -3 0 ; 3 -9 1 ; 0 1 -7 ];
+B = [ 5 ; 2 ; 4 ];
+X = A\B;
+disp("Currents  = ");
+disp(X);
+P = [31 -6 ; -6 41];
+Q = [75 ; 90];
+R = P\Q;
+disp("Voltages VA and VB = ");
+disp(R);

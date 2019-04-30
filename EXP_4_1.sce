@@ -1,0 +1,20 @@
+amp = input("Please Enter Amplitude : ");
+f = input("Please Enter Frequency : ");
+phase = input("Please Enter Phase : ");
+fs = input("Please Enter Sampling Frequency : ");
+n = 0:1:((2*fs)/f);
+x = amp*sin((2*%pi*f*n/fs) + phase);
+plot2d3(n,x);
+xlabel("Time");
+disp("Energy of Wave = ");
+ex=sum(x.*x);
+disp(ex);
+save("data_x.dat",'x');
+save("data_n.dat",'n');
+clear all;
+disp(" -- Cleared all data --");
+pause
+load("data_x.dat",'x');
+load("data_n.dat",'n');
+plot2d3(n,x);
+xlabel("Time");
